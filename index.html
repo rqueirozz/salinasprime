@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SalinasPrime | Imóveis em Salinópolis, Pará</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Imóveis à venda em Salinópolis com atendimento de confiança. Com Ronald Queiroz - SalinasPrime.">
+  <meta property="og:title" content="SalinasPrime | Imóveis em Salinópolis">
+  <meta property="og:description" content="Seu imóvel no litoral com atendimento profissional e transparente.">
+  <meta property="og:image" content="https://salinasprime.com.br/og-image.jpg">
+  <meta property="og:url" content="https://salinasprime.com.br">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Tailwind + FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#003366',
+            secondary: '#FFD700',
+            accent: '#1E90FF'
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(0, 51, 102, 0.9) 0%, rgba(30, 144, 255, 0.7) 100%);
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .property-card {
+      transition: all 0.3s ease;
+    }
+
+    .wave-shape {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .wave-shape svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 150px;
+    }
+
+    .wave-shape .shape-fill {
+      fill: #003366;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- ✅ BOTÃO FIXO DE WHATSAPP -->
+  <a
+    href="https://wa.me/5591987654321"
+    class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white text-lg p-3 rounded-full shadow-lg z-50"
+    target="_blank"
+    aria-label="Fale no WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- 🔹 MENU DE NAVEGAÇÃO -->
+  <nav class="bg-primary text-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-home text-secondary text-2xl"></i>
+        <span class="text-xl font-bold">Salinas<span class="text-secondary">Prime</span></span>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="#featured" class="hover:text-secondary transition">Destaques</a>
+        <a href="#about" class="hover:text-secondary transition">Sobre</a>
+        <a href="#why-us" class="hover:text-secondary transition">Vantagens</a>
+        <a href="#contact" class="hover:text-secondary transition">Contato</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-dark pb-4 px-4">
+      <a href="#featured" class="block py-2 hover:text-secondary transition">Destaques</a>
+      <a href="#about" class="block py-2 hover:text-secondary transition">Sobre</a>
+      <a href="#why-us" class="block py-2 hover:text-secondary transition">Vantagens</a>
+      <a href="#contact" class="block py-2 hover:text-secondary transition">Contato</a>
+    </div>
+  </nav>
+<!-- HERO SECTION -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Salinópolis beach" class="w-full h-full object-cover">
+    <div class="absolute inset-0 hero-gradient"></div>
+  </div>
+
+  <div class="relative z-10 container mx-auto px-4 text-center text-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-8">
+        <img src="https://images.unsplash.com/photo-1557862921-37829c790f19" alt="Ronald Queiroz" class="w-32 h-32 rounded-full mx-auto border-4 border-secondary object-cover shadow-lg">
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Encontre seu imóvel dos sonhos em Salinópolis</h1>
+      <p class="text-xl mb-6">Com <span class="font-semibold text-secondary">Ronald Queiroz</span>, CRECI-PA 12345</p>
+      <a href="https://wa.me/5591987654321" class="bg-secondary hover:bg-yellow-600 text-primary font-bold py-3 px-8 rounded-full inline-flex items-center transition duration-300 shadow-lg">
+        <i class="fab fa-whatsapp mr-2 text-xl"></i> Fale pelo WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="wave-shape">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,0V46.29c47.79,22.2,103.59,32.17..." opacity=".25" class="shape-fill"></path>
+      <path d="M0,0V15.81C13,36.92..." opacity=".5" class="shape-fill"></path>
+      <path d="M0,0V5.63C149.93,59..." class="shape-fill"></path>
+    </svg>
+  </div>
+</section>
+
+<!-- IMÓVEIS EM DESTAQUE -->
+<section id="featured" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-primary mb-4">Imóveis em Destaque</h2>
+      <div class="w-20 h-1 bg-secondary mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Imóvel 1 -->
+      <div class="property-card bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Beach house" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+          <div class="absolute top-4 right-4 bg-secondary text-primary font-bold px-3 py-1 rounded-full">VENDA</div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-primary mb-2">Casa de Praia em Atalaia</h3>
+          <p class="text-gray-600 mb-4">3 quartos, 2 banheiros, 120m²</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-primary">R$ 450.000</span>
+            <a href="#" class="text-accent hover:text-primary font-medium">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imóvel 2 -->
+      <div class="property-card bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Apartment" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+          <div class="absolute top-4 right-4 bg-secondary text-primary font-bold px-3 py-1 rounded-full">VENDA</div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-primary mb-2">Apartamento com Vista para o Mar</h3>
+          <p class="text-gray-600 mb-4">2 quartos, 1 banheiro, 75m²</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-primary">R$ 320.000</span>
+            <a href="#" class="text-accent hover:text-primary font-medium">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imóvel 3 -->
+      <div class="property-card bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6" alt="Land" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+          <div class="absolute top-4 right-4 bg-secondary text-primary font-bold px-3 py-1 rounded-full">VENDA</div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-primary mb-2">Terreno Residencial</h3>
+          <p class="text-gray-600 mb-4">500m², plano, próximo à praia</p>
+          <div class="flex justify-between items-center">
+            <span class="text-2xl font-bold text-primary">R$ 180.000</span>
+            <a href="#" class="text-accent hover:text-primary font-medium">Ver detalhes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SOBRE RONALD -->
+<section id="about" class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col lg:flex-row items-center">
+      <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+        <img src="https://images.unsplash.com/photo-1557862921-37829c790f19" alt="Ronald Queiroz" class="w-full rounded-lg shadow-xl">
+      </div>
+      <div class="lg:w-1/2">
+        <h2 class="text-3xl font-bold text-primary mb-6">Ronald Queiroz</h2>
+        <p class="text-gray-700 mb-4">
+          Especialista em imóveis em Salinópolis há mais de 10 anos, Ronald Queiroz é o profissional que vai te ajudar a encontrar o imóvel perfeito ou vender sua propriedade pelo melhor valor.
+        </p>
+        <p class="text-gray-700 mb-6">
+          Nascido e criado na região, Ronald possui um conhecimento profundo do mercado imobiliário local, das melhores localizações e das tendências de valorização.
+        </p>
+        <div class="bg-primary text-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-award text-secondary text-2xl mr-4"></i>
+            <h3 class="text-xl font-bold">CRECI-PA 12345</h3>
+          </div>
+          <p>
+            Profissional registrado e regulamentado pelo CRECI-PA, garantindo segurança e legalidade em todas as transações.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VANTAGENS -->
+<section id="why-us" class="py-16 bg-primary text-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Por que escolher a SalinasPrime?</h2>
+      <div class="w-20 h-1 bg-secondary mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center p-6 bg-white bg-opacity-10 rounded-lg">
+        <div class="w-16 h-16 bg-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-handshake text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Confiança</h3>
+        <p>Atendimento transparente e honesto em todas as etapas da negociação.</p>
+      </div>
+      <div class="text-center p-6 bg-white bg-opacity-10 rounded-lg">
+        <div class="w-16 h-16 bg-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-map-marked-alt text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Conhecimento Local</h3>
+        <p>Experiência real com os bairros, valorização e comportamento do mercado de Salinópolis.</p>
+      </div>
+      <div class="text-center p-6 bg-white bg-opacity-10 rounded-lg">
+        <div class="w-16 h-16 bg-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="fas fa-comments text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Comunicação Direta</h3>
+        <p>WhatsApp, ligação, e-mail ou pessoalmente. Fale com quem resolve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+      <div class="md:flex">
+        <div class="md:w-1/2 bg-primary text-white p-8">
+          <h2 class="text-2xl font-bold mb-4">Quer vender seu imóvel?</h2>
+          <p class="mb-6">Preencha o formulário ao lado e entraremos em contato.</p>
+          <div class="flex items-center mb-4"><i class="fas fa-home text-secondary text-xl mr-3"></i><p>Análise gratuita</p></div>
+          <div class="flex items-center mb-4"><i class="fas fa-chart-line text-secondary text-xl mr-3"></i><p>Estratégia de venda</p></div>
+          <div class="flex items-center"><i class="fas fa-camera text-secondary text-xl mr-3"></i><p>Fotos profissionais</p></div>
+        </div>
+        <div class="md:w-1/2 p-8">
+          <form id="property-form" class="space-y-4">
+            <div><label for="name" class="block text-gray-700 mb-2">Nome</label><input type="text" id="name" class="w-full px-4 py-2 border rounded-lg"></div>
+            <div><label for="phone" class="block text-gray-700 mb-2">Telefone</label><input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg"></div>
+            <div><label for="email" class="block text-gray-700 mb-2">E-mail</label><input type="email" id="email" class="w-full px-4 py-2 border rounded-lg"></div>
+            <div><label for="property-type" class="block text-gray-700 mb-2">Tipo de imóvel</label>
+              <select id="property-type" class="w-full px-4 py-2 border rounded-lg">
+                <option value="">Selecione...</option>
+                <option value="house">Casa</option>
+                <option value="apartment">Apartamento</option>
+                <option value="land">Terreno</option>
+                <option value="commercial">Comercial</option>
+              </select>
+            </div>
+            <div><label for="message" class="block text-gray-700 mb-2">Detalhes</label><textarea id="message" rows="3" class="w-full px-4 py-2 border rounded-lg"></textarea></div>
+            <button type="submit" class="w-full bg-secondary hover:bg-yellow-600 text-primary font-bold py-3 px-4 rounded-lg transition duration-300">Enviar proposta</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-primary mb-4">O que dizem nossos clientes</h2>
+      <div class="w-20 h-1 bg-secondary mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div class="text-secondary text-2xl mb-2">
+          ★★★★★
+        </div>
+        <p class="text-gray-700 mb-4">"O Ronald me ajudou a achar o imóvel perfeito! Confio 100%."</p>
+        <h4 class="font-bold text-primary">Ana Clara</h4>
+        <p class="text-sm text-gray-600">Compradora</p>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div class="text-secondary text-2xl mb-2">
+          ★★★★★
+        </div>
+        <p class="text-gray-700 mb-4">"Vendi meu apartamento em 3 semanas. Recomendo demais!"</p>
+        <h4 class="font-bold text-primary">Carlos Eduardo</h4>
+        <p class="text-sm text-gray-600">Vendedor</p>
+      </div>
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div class="text-secondary text-2xl mb-2">
+          ★★★★★
+        </div>
+        <p class="text-gray-700 mb-4">"Já comprei 3 terrenos com ele. Visão de investimento real."</p>
+        <h4 class="font-bold text-primary">Ricardo Almeida</h4>
+        <p class="text-sm text-gray-600">Investidor</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- RODAPÉ -->
+<footer id="contact" class="bg-primary text-white pt-12 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <i class="fas fa-home text-secondary text-2xl"></i>
+          <span class="text-xl font-bold">Salinas<span class="text-secondary">Prime</span></span>
+        </div>
+        <p class="mb-4">Especialistas em imóveis em Salinópolis. Conectando sonhos à realidade desde 2010.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-white hover:text-secondary text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white hover:text-secondary text-xl"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-white hover:text-secondary text-xl"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="#featured" class="hover:text-secondary transition">Imóveis</a></li>
+          <li><a href="#about" class="hover:text-secondary transition">Sobre Ronald</a></li>
+          <li><a href="#why-us" class="hover:text-secondary transition">Vantagens</a></li>
+          <li><a href="#contact" class="hover:text-secondary transition">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold mb-4">Contato</h3>
+        <ul class="space-y-2">
+          <li class="flex items-center"><i class="fas fa-map-marker-alt text-secondary mr-3"></i><span>Av. Beira Mar, 1234<br>Salinópolis, PA</span></li>
+          <li class="flex items-center"><i class="fas fa-phone text-secondary mr-3"></i><span>(91) 98765-4321</span></li>
+          <li class="flex items-center"><i class="fas fa-envelope text-secondary mr-3"></i><span>contato@salinasprime.com.br</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold mb-4">Horário</h3>
+        <p class="mb-2">Seg-Sex: 8h às 18h</p>
+        <p>Sábado: 9h às 13h</p>
+        <div class="mt-4">
+          <a href="https://wa.me/5591987654321" class="inline-flex items-center bg-secondary hover:bg-yellow-600 text-primary font-bold py-2 px-4 rounded transition duration-300">
+            <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 pt-6 text-center text-sm">
+      <p>&copy; 2024 SalinasPrime. Todos os direitos reservados. CRECI-PA 12345</p>
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+  // Toggle mobile menu
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+
+  // Form submit
+  document.getElementById('property-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Obrigado pelo seu interesse! Entraremos em contato em breve.');
+    this.reset();
+  });
+
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+
+      // Fecha menu mobile se aberto
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
